@@ -18,9 +18,21 @@ textarea {
   resize: none;
 }
 
+button:hover {
+  transform: scaleX(1.1);
+  transition: transform 0.5s;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
 /* HEADER */
 
 header {
+  position: sticky;
+  top: 0;
   background-color: bisque;
   display: flex;
   justify-content: end;
