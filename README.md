@@ -1,5 +1,5 @@
 # Repositori Tugas-tugas PBI
-## Untuk setiap minggu dipisah dalam branch masing-masing
+## Untuk tugas setiap minggu dipisah dalam branch masing-masing
 
 Tugas 1
 ```
