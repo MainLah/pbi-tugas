@@ -1,4 +1,10 @@
 /* GLOBAL STYLE */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -23,7 +29,7 @@ button:hover {
   transition: transform 0.5s;
 }
 
-img:hover {
+.product-images:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
@@ -33,9 +39,13 @@ img:hover {
 header {
   position: sticky;
   top: 0;
-  background-color: bisque;
   display: flex;
   justify-content: end;
+  transition: cubic-bezier(1, 0, 0, 1) 0.2s;
+}
+
+.solidify {
+  background-color: bisque;
 }
 
 nav ul {
@@ -97,6 +107,20 @@ main > * {
   cursor: pointer;
 }
 
+article {
+  display: flex;
+  align-items: center;
+}
+
+article > p {
+  display: inline;
+}
+
+.testimoni-icons {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
 #contact form {
   display: flex;
   flex-direction: column;
@@ -138,6 +162,10 @@ footer {
   padding: 1rem;
 }
 
+footer > address > p {
+  text-align: end;
+}
+
 @media screen and (max-width: 768px) {
   main {
     padding: 5vh 5vw;
@@ -145,6 +173,14 @@ footer {
 
   #contact form > input,
   #contact form > textarea {
-    width: 10rem;
+    width: 15rem;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer > address > p {
+    text-align: center;
   }
 }
