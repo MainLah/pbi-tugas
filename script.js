@@ -36,3 +36,36 @@ burgerSVG.onclick = () => {
     header.style.height = "3.75rem";
   }
 };
+
+//validate form
+
+const errorMessage = document.querySelector("#error-message-form");
+const form = document.querySelector("form");
+const button = document.querySelector("#form-button");
+
+button.onclick = (e) => {
+  errorMessage.classList.add("hidden");
+  e.preventDefault();
+
+  const elements = {
+    Nama: document.querySelector("#name-form"),
+    Email: document.querySelector("#email-form"),
+    Pesan: document.querySelector("#message-form"),
+  };
+
+  for (const key in elements) {
+    if (!elements[key].value) {
+      errorMessage.textContent = `${key} tidak boleh kosong!`;
+      errorMessage.classList.remove("hidden");
+      scroll();
+      return;
+    }
+  }
+};
+
+const scroll = () => {
+  window.scrollTo({
+    top: 3600,
+    behavior: "smooth",
+  });
+};

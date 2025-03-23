@@ -177,6 +177,12 @@ article > p {
   cursor: pointer;
 }
 
+#error-message-form {
+  text-align: center;
+  color: red;
+  animation: error 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s 3;
+}
+
 footer {
   background-color: bisque;
   display: flex;
@@ -206,5 +212,17 @@ footer > address > p {
 
   footer > address > p {
     text-align: center;
+  }
+}
+
+@keyframes error {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
