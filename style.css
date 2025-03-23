@@ -58,6 +58,30 @@ nav ul li {
   margin: 0 10px;
 }
 
+.burger-menu-icon {
+  width: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 3.75rem;
+  left: -1.5rem;
+}
+
+.mobile li {
+  margin: 1rem 0;
+  border-bottom: 1px solid #000000;
+}
+
 /* MAIN */
 
 main {
