@@ -4,6 +4,7 @@ const header = document.querySelector("header");
 const desktopNav = document.querySelector(".desktop");
 const mobileNav = document.querySelector(".mobile");
 const burgerSVG = document.querySelector(".burger-menu-icon");
+const links = document.querySelectorAll(".link");
 
 window.onscroll = () => {
   if (window.scrollY > 50) {
@@ -25,7 +26,9 @@ window.onload = () => {
 
 burgerSVG.onclick = () => {
   if (mobileNav.classList.contains("hidden")) {
-    mobileNav.classList.remove("hidden");
+    setTimeout(() => {
+      mobileNav.classList.remove("hidden");
+    }, 100);
   } else {
     mobileNav.classList.add("hidden");
   }
