@@ -4,7 +4,6 @@ const header = document.querySelector("header");
 const desktopNav = document.querySelector(".desktop");
 const mobileNav = document.querySelector(".mobile");
 const burgerSVG = document.querySelector(".burger-menu-icon");
-const links = document.querySelectorAll(".link");
 
 window.onscroll = () => {
   if (window.scrollY > 50) {
@@ -58,12 +57,15 @@ button.onclick = (e) => {
 
   for (const key in elements) {
     if (!elements[key].value) {
-      errorMessage.textContent = `${key} tidak boleh kosong!`;
+      errorMessage.textContent = `${key} tidak boleh kosong!`.toUpperCase();
       errorMessage.classList.remove("hidden");
       scroll();
       return;
     }
   }
+
+  form.reset();
+  window.alert("Pesan berhasil terkirim!");
 };
 
 const scroll = () => {

@@ -9,6 +9,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f5eedc;
 }
 
 a {
@@ -45,7 +46,7 @@ header {
 }
 
 .solidify {
-  background-color: bisque;
+  background-color: #27548a;
 }
 
 nav ul {
@@ -117,6 +118,7 @@ main > * {
   border: 1px solid #000000;
   border-radius: 5px;
   width: 15rem;
+  background-color: #ffffff;
 }
 
 #catalog img {
@@ -127,7 +129,7 @@ main > * {
   margin-top: 1rem;
   padding: 0.5rem;
   border: none;
-  background-color: bisque;
+  background-color: #dda853;
   cursor: pointer;
 }
 
@@ -173,18 +175,19 @@ article > p {
   width: 5rem;
   padding: 0.5rem;
   border: none;
-  background-color: bisque;
+  background-color: #dda853;
   cursor: pointer;
 }
 
 #error-message-form {
+  font-style: italic;
   text-align: center;
   color: red;
   animation: error 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s 3;
 }
 
 footer {
-  background-color: bisque;
+  background-color: #27548a;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
