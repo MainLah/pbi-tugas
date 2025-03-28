@@ -25,7 +25,9 @@ window.onload = () => {
 
 burgerSVG.onclick = () => {
   if (mobileNav.classList.contains("hidden")) {
-    mobileNav.classList.remove("hidden");
+    setTimeout(() => {
+      mobileNav.classList.remove("hidden");
+    }, 100);
   } else {
     mobileNav.classList.add("hidden");
   }
@@ -55,12 +57,15 @@ button.onclick = (e) => {
 
   for (const key in elements) {
     if (!elements[key].value) {
-      errorMessage.textContent = `${key} tidak boleh kosong!`;
+      errorMessage.textContent = `${key} tidak boleh kosong!`.toUpperCase();
       errorMessage.classList.remove("hidden");
       scroll();
       return;
     }
   }
+
+  form.reset();
+  window.alert("Pesan berhasil terkirim!");
 };
 
 const scroll = () => {
