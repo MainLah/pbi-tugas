@@ -74,3 +74,55 @@ const scroll = () => {
     behavior: "smooth",
   });
 };
+
+// add to cart control
+
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+const quantityControl = document.querySelectorAll(".quantity-control");
+const confirmButtons = document.querySelectorAll(".confirm-button");
+const plus = document.querySelectorAll(".quantity-plus-inputs");
+const minus = document.querySelectorAll(".quantity-minus-inputs");
+const quantityLabels = document.querySelectorAll(".quantity-h3");
+let counter = 0;
+
+addToCartButtons.forEach((button, i) => {
+  button.onclick = () => {
+    if (!button.classList.contains("hidden")) {
+      button.classList.add("hidden");
+      quantityControl[i].classList.remove("hidden");
+    }
+  };
+});
+
+confirmButtons.forEach((button, i) => {
+  button.onclick = () => {
+    if (!button.classList.contains("hidden")) {
+      quantityControl[i].classList.add("hidden");
+      addToCartButtons[i].classList.remove("hidden");
+      counter = 0;
+      quantityLabels[i].textContent = counter;
+    }
+  };
+});
+
+plus.forEach((button, i) => {
+  button.onclick = () => {
+    counter++;
+    quantityLabels[i].textContent = counter;
+    if (counter > 99) {
+      counter = 99;
+      quantityLabels[i].textContent = counter;
+    }
+  };
+});
+
+minus.forEach((button, i) => {
+  button.onclick = () => {
+    counter--;
+    quantityLabels[i].textContent = counter;
+    if (counter < 0) {
+      counter = 0;
+      quantityLabels[i].textContent = counter;
+    }
+  };
+});
