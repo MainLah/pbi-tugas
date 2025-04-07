@@ -55,3 +55,24 @@ Poin yang dinilai:
 Tools
 Text Editor (Visual Studio Code, Sublime Text, Notepad, dll)
 ```
+
+Tugas 4
+```
+Deployment Website
+
+Detail Tugas
+Sebelum melakukan deploy, kamu harus pastikan bahwa:
+1. Desain sudah rapi
+2. Navigasi mudah dan dapat digunakan dengan baik
+3. Interactive feature berjalan dengan baik
+4. Struktur file rapi.
+Gunakan salah satu platform hosting untuk deployment, jika sudah kemudian lakukan pengecekan
+Peserta akan diminta untuk mempresentasikan hasil website yang sudah dikembangkan selama 4 minggu
+Poin yang dinilai:
+1. Website berhasil di-deploy dan dapat diakses melalui URL publik (40%)
+2. Desain dan tata letak tetap rapi setelah di-deploy (30%)
+3. Fitur interaktif dan navigasi berfungsi dengan baik (20%)
+4. Struktur file di repository GitHub terorganisir dengan baik (10%)
+Tools
+Text Editor (Visual Studio Code, Sublime Text, Notepad, dll), Version Control, dan Hosting
+```
