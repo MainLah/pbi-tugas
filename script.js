@@ -78,7 +78,7 @@ burgerSVG.onclick = () => {
   }
 
   if (header.style.height === "3.75rem") {
-    header.style.height = "18rem";
+    header.style.height = "25rem";
   } else {
     header.style.height = "3.75rem";
   }
