@@ -61,7 +61,7 @@ window.onscroll = () => {
 window.onload = () => {
   if (window.innerWidth < 768) {
     // make the header have actual height and not 0
-    header.style.height = "5rem";
+    header.style.height = "3.75rem";
 
     burgerSVG.classList.remove("hidden");
     desktopNav.classList.add("hidden");
