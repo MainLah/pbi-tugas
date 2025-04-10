@@ -18,7 +18,15 @@ a {
 }
 
 a:hover {
+  cursor: pointer;
+}
+
+.nav-links:hover {
   color: #535353;
+}
+
+.solidify > nav > ul > li > .nav-links:hover {
+  color: #f5eedc !important;
 }
 
 h3 {

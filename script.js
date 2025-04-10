@@ -1,9 +1,54 @@
+// helper functions
+
+const scroll = (YCoor) => {
+  window.scrollTo({
+    top: YCoor,
+    behavior: "smooth",
+  });
+};
+
 // animation and interactivity for the website
 
 const header = document.querySelector("header");
 const desktopNav = document.querySelector(".desktop");
 const mobileNav = document.querySelector(".mobile");
 const burgerSVG = document.querySelector(".burger-menu-icon");
+const navLinks = document.querySelectorAll(".nav-links");
+const coordsForNav = {
+  homeCoor:
+    document.querySelector("#hero").getBoundingClientRect().top +
+    window.scrollY,
+  catalogCoor:
+    document.querySelector("#catalog").getBoundingClientRect().top +
+    window.scrollY,
+  testimoniesCoor:
+    document.querySelector("#testi").getBoundingClientRect().top +
+    window.scrollY,
+  contactCoor:
+    document.querySelector("#contact").getBoundingClientRect().top +
+    window.scrollY,
+  cart: 0,
+  profile: 0,
+};
+
+/*
+ *
+ * I made the loop to only run 6 times because
+ * there are 12 links in total but 6 of them are duplicates
+ * 6 of them are for the desktop and 6 of them are for the mobile
+ *
+ */
+
+for (let i = 0; i < 6; i++) {
+  navLinks[i].onclick = (e) => {
+    e.preventDefault();
+    scroll(coordsForNav[Object.keys(coordsForNav)[i]]);
+  };
+  navLinks[i + 6].onclick = (e) => {
+    e.preventDefault();
+    scroll(coordsForNav[Object.keys(coordsForNav)[i]]);
+  };
+}
 
 window.onscroll = () => {
   if (window.scrollY > 50) {
@@ -59,20 +104,13 @@ button.onclick = (e) => {
     if (!elements[key].value) {
       errorMessage.textContent = `${key} tidak boleh kosong!`.toUpperCase();
       errorMessage.classList.remove("hidden");
-      scroll();
+      scroll(3600);
       return;
     }
   }
 
   form.reset();
   window.alert("Pesan berhasil terkirim!");
-};
-
-const scroll = () => {
-  window.scrollTo({
-    top: 3600,
-    behavior: "smooth",
-  });
 };
 
 // add to cart control
