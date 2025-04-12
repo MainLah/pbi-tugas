@@ -36,6 +36,7 @@ const coordsForNav = {
  * I made the loop to only run 6 times because
  * there are 12 links in total but 6 of them are duplicates
  * 6 of them are for the desktop and 6 of them are for the mobile
+ * chore: find a better way to do this
  *
  */
 
